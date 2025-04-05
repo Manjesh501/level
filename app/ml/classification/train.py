@@ -60,7 +60,7 @@ def train_model():
         X, y, test_size=0.2, random_state=42
     )
     
-    # Create ensemble pipeline
+    # Create pipeline
     pipeline = Pipeline([
         ('vectorizer', TfidfVectorizer(
             max_features=15000,
@@ -72,30 +72,13 @@ def train_model():
             smooth_idf=True,
             sublinear_tf=True
         )),
-        ('classifier', VotingClassifier(estimators=[
-            ('rf', RandomForestClassifier(
-                n_estimators=500,
-                max_depth=20,
-                min_samples_split=2,
-                min_samples_leaf=1,
-                class_weight='balanced',
-                random_state=42,
-                n_jobs=-1
-            )),
-            ('svm', LinearSVC(
-                C=1.0,
-                class_weight='balanced',
-                random_state=42,
-                max_iter=2000
-            )),
-            ('xgb', XGBClassifier(
-                n_estimators=200,
-                max_depth=7,
-                learning_rate=0.1,
-                random_state=42,
-                n_jobs=-1
-            ))
-        ], voting='hard'))
+        ('classifier', LinearSVC(
+            C=1.0,
+            class_weight='balanced',
+            random_state=42,
+            max_iter=2000,
+            dual=False  # Added for better performance on high-dimensional data
+        ))
     ])
     
     # Train
