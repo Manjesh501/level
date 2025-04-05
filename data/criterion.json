@@ -1,0 +1,33 @@
+{
+    "1": {
+        "name": "Curricular Aspects",
+        "metrics": {
+            "1.1": "Curriculum Design and Development",
+            "1.2": "Academic Flexibility",
+            "1.3": "Curriculum Enrichment",
+            "1.4": "Feedback System"
+        }
+    },
+    "2": {
+        "name": "Teaching-Learning and Evaluation",
+        "metrics": {
+            "2.1": "Student Enrollment and Profile",
+            "2.2": "Catering to Student Diversity",
+            "2.3": "Teaching-Learning Process",
+            "2.4": "Teacher Profile and Quality",
+            "2.5": "Evaluation Process and Reforms",
+            "2.6": "Student Performance and Learning Outcomes"
+        }
+    },
+    "3": {
+        "name": "Research, Innovations and Extension",
+        "metrics": {
+            "3.1": "Promotion of Research and Facilities",
+            "3.2": "Resource Mobilization for Research",
+            "3.3": "Innovation Ecosystem",
+            "3.4": "Research Publications and Awards",
+            "3.5": "Consultancy",
+            "3.6": "Extension Activities"
+        }
+    }
+}

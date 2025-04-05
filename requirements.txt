@@ -1,0 +1,13 @@
+# requirements.txt
+pandas
+numpy
+scikit-learn
+joblib
+nltk
+nlpaug
+python-docx
+openpyxl
+pdfminer.six
+fastapi
+python-multipart
+uvicorn
